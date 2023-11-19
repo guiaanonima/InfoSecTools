@@ -24,7 +24,9 @@ def exibicao_de_categorias():
 		print("0) Sair")
 		
 		try:
-			escolha = int(input("Selecione uma categoria ou digite '0' para sair: "))
+			escolha = input("Selecione uma ou mais categorias (1,2,3) ou digite '0' para sair: ")
+
+			itens_escolha = escolha.split(',')
 
 			if escolha == 'clear':
 				system('clear')
@@ -33,13 +35,17 @@ def exibicao_de_categorias():
 			elif escolha == 0:
 				break
 			else:
-				instalacao_de_pacotes(escolha, categorias, instalador, argumento_do_instalador)
+				if len(itens_escolha) > 1:
+					for instalacao in itens_escolha:
+						instalacao_de_pacotes(instalacao, categorias, instalador, argumento_do_instalador)
+				else:
+					instalacao_de_pacotes(escolha, categorias, instalador, argumento_do_instalador)
 
 		except KeyboardInterrupt:
 			print('')
 			exit(1)
 		except ValueError:
-			print("Escolha inválida. Tente novamente.")
+			pass
 
 def menu():
 	while True:
