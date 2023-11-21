@@ -1,3 +1,4 @@
+import inquirer
 from os import system, remove
 from categorias import categorias
 from Instalacao import instalacao_de_pacotes
@@ -17,35 +18,40 @@ def exibicao_de_categorias():
 		print(f"Desculpe, este script suporta apenas Debian, Ubuntu e Arch Linux. Sua distribuição ({distro_info}) não é suportada.")
 		exit(1)
 
-	while True:
-		print("Categorias:")
-		for categoria_id, (numero_da_categoria, _) in categorias.items():
-			print(f"{categoria_id} - {numero_da_categoria}")
-		print("0) Sair")
-		
+	while True:		
 		try:
-			escolha = input("Selecione uma ou mais categorias (1,2,3) ou digite '0' para sair: ")
-
-			itens_escolha = escolha.split(',')
-
-			if escolha == 'clear':
-				system('clear')
-			elif escolha == 'exit':
-				exit(1)
-			elif escolha == 0:
-				break
-			else:
-				if len(itens_escolha) > 1:
-					for instalacao in itens_escolha:
-						instalacao_de_pacotes(instalacao, categorias, instalador, argumento_do_instalador)
-				else:
-					instalacao_de_pacotes(escolha, categorias, instalador, argumento_do_instalador)
+			teste = [
+				inquirer.Checkbox(
+					'selecao_categorias',
+					message = 'Qual categoria deseja instalar? (Pressione <space> para selecionar, Enter para finalizar)',
+					choices = [
+						('1 - Coleta de Informações', 1),
+						('2 - Análise de Vulnerabilidade', 2),
+						('3 - Ataques Wireless', 3),
+						('4 - Aplicações Web', 4),
+						('5 - Sniffing e Spoofing', 5),
+						('6 - Manutenção de Acesso', 6),
+						('7 - Ferramentas de Relatório', 7),
+						('8 - Ferramentas de Exploração', 8),
+						('9 - Ferramentas Forenses', 9),
+						('10 - Teste de Estresse', 10),
+						('11 - Ataques de Senha', 11),
+						('12 - Engenharia Reversa', 12),
+						('13 - Hacking de Hardware', 13),
+						('14 - Extras', 14),
+						('15 - Todas as Ferramentas', 15)
+					],
+				),
+			]
+			respostas = inquirer.prompt(teste)
+			for i in respostas['selecao_categorias']:
+				instalacao_de_pacotes(i, categorias, instalador, argumento_do_instalador)
 
 		except KeyboardInterrupt:
 			print('')
 			exit(1)
 		except ValueError:
-			pass
+			print("Escolha inválida. Tente novamente.")
 
 def menu():
 	while True:
