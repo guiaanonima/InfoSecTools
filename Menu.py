@@ -15,7 +15,7 @@ def banner():
   888   888  888 888   Y88..88P Y88b  d88P Y8b.     Y88b.    888  Y88..88P Y88..88P 888      X88 
 8888888 888  888 888    "Y88P"   "Y8888P"   "Y8888   "Y8888P 888   "Y88P"   "Y88P"  888  88888P' 
                                                                                                  
-				Guia Anonima: guiaanonima.com                                                                                                                              
+				Guia Anônima: guiaanonima.com                                                                                                                              
 	   ''')
 
 
