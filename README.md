@@ -60,7 +60,7 @@ pip install -r requirements.txt
 ## Execução do programa
 Para executar o script, execute o comando abaixo:
 ```shell
-sudo python3 main.py
+sudo python3 infosectools.py
 ```
 
 # Contribua!
