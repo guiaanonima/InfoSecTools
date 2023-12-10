@@ -1,3 +1,4 @@
+import inquirer
 from os import system, remove, path
 from categorias import categorias
 from Instalacao import instalacao_de_pacotes
