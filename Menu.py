@@ -1,3 +1,4 @@
+import inquirer
 from os import system, remove, path
 from categorias import categorias
 from Instalacao import instalacao_de_pacotes
@@ -68,7 +69,7 @@ def menu():
 
 		while opcao_escolhida == '1':
 			print('''
-1) Adicionar repositórios Kali
+1) Adicionar repositórios no infosectools.list
 2) Atualizar
 3) Remover lista de repositório infosectools.list
 4) Visualizar o conteúdo do arquivo infosectools.list
