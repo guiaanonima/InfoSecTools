@@ -40,16 +40,33 @@ def exibicao_de_categorias():
 		print("0) Sair")
 		
 		try:
-			escolha = int(input("Selecione uma categoria ou digite '0' para sair: "))
+			teste = [
+				inquirer.Checkbox(
+					'selecao_categorias',
+					message = 'Qual categoria deseja instalar? (Pressione <space> para selecionar, Enter para finalizar)',
+					choices = [
+						('1 - Coleta de Informações', 1),
+						('2 - Análise de Vulnerabilidade', 2),
+						('3 - Ataques Wireless', 3),
+						('4 - Aplicações Web', 4),
+						('5 - Sniffing e Spoofing', 5),
+						('6 - Manutenção de Acesso', 6),
+						('7 - Ferramentas de Relatório', 7),
+						('8 - Ferramentas de Exploração', 8),
+						('9 - Ferramentas Forenses', 9),
+						('10 - Teste de Estresse', 10),
+						('11 - Ataques de Senha', 11),
+						('12 - Engenharia Reversa', 12),
+						('13 - Hacking de Hardware', 13),
+						('14 - Extras', 14),
+						('15 - Todas as Ferramentas', 15)
+					],
+				),
+			]
 
-			if escolha == 'clear':
-				system('clear')
-			elif escolha == 'exit':
-				exit(1)
-			elif escolha == 0:
-				break
-			else:
-				instalacao_de_pacotes(escolha, categorias, instalador, argumento_do_instalador)
+			respostas = inquirer.prompt(teste)
+			for i in respostas['selecao_categorias']:
+				instalacao_de_pacotes(i, categorias, instalador, argumento_do_instalador)
 
 		except KeyboardInterrupt:
 			print('')
