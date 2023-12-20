@@ -19,6 +19,9 @@ def banner():
 	   ''')
 
 
+def clear():
+	system('clear')
+
 # configuração do gerenciador de pacotes referente a distribuição linux
 def exibicao_de_categorias():
 	distro_info = distro.name().lower().split()
@@ -34,38 +37,33 @@ def exibicao_de_categorias():
 		exit(1)
 
 	while True:
-		print("Categorias:")
-		for categoria_id, (numero_da_categoria, _) in categorias.items():
-			print(f"{categoria_id} - {numero_da_categoria}")
-		print("0) Sair")
-		
 		try:
 			teste = [
 				inquirer.Checkbox(
 					'selecao_categorias',
 					message = 'Qual categoria deseja instalar? (Pressione <space> para selecionar, Enter para finalizar)',
 					choices = [
-						('1 - Coleta de Informações', 1),
-						('2 - Análise de Vulnerabilidade', 2),
-						('3 - Ataques Wireless', 3),
-						('4 - Aplicações Web', 4),
-						('5 - Sniffing e Spoofing', 5),
-						('6 - Manutenção de Acesso', 6),
-						('7 - Ferramentas de Relatório', 7),
-						('8 - Ferramentas de Exploração', 8),
-						('9 - Ferramentas Forenses', 9),
-						('10 - Teste de Estresse', 10),
-						('11 - Ataques de Senha', 11),
-						('12 - Engenharia Reversa', 12),
-						('13 - Hacking de Hardware', 13),
-						('14 - Extras', 14),
-						('15 - Todas as Ferramentas', 15)
+						('Coleta de Informações', 1),
+						('Análise de Vulnerabilidade', 2),
+						('Ataques Wireless', 3),
+						('Aplicações Web', 4),
+						('Sniffing e Spoofing', 5),
+						('Manutenção de Acesso', 6),
+						('Ferramentas de Relatório', 7),
+						('Ferramentas de Exploração', 8),
+						('Ferramentas Forenses', 9),
+						('Teste de Estresse', 10),
+						('Ataques de Senha', 11),
+						('Engenharia Reversa', 12),
+						('Hacking de Hardware', 13),
+						('Extras', 14),
+						('Todas as Ferramentas', 15)
 					],
 				),
 			]
 
-			respostas = inquirer.prompt(teste)
-			for i in respostas['selecao_categorias']:
+			respostas = inquirer.prompt(teste)['selecao_categorias']
+			for i in respostas:
 				instalacao_de_pacotes(i, categorias, instalador, argumento_do_instalador)
 
 		except KeyboardInterrupt:
@@ -76,49 +74,71 @@ def exibicao_de_categorias():
 
 def menu():
 	while True:
-		print('''
-1) Adicionar repositórios Kali e Atualizar
-2) Visualizar Categorias
-0) Sair
 
-		''')
-		opcao_escolhida = str(input("\033[1;36mGA > \033[1;m"))
+		inquirer_lista_incial = [
+			inquirer.List(
+				"lista_inicial",
+				message="\033[1;36mEscolher \033[1;m",
+				choices=[
+					('Adicionar repositórios Kali e Atualizar', 1),
+					('Visualizar Categorias', 2),
+					('Sair', 0)
+				],
+			),
+		]	
 
-		while opcao_escolhida == '1':
-			print('''
-1) Adicionar repositórios no infosectools.list
-2) Atualizar
-3) Remover lista de repositório infosectools.list
-4) Visualizar o conteúdo do arquivo infosectools.list
-5) Voltar
+		opcao_escolhida = inquirer.prompt(inquirer_lista_incial)['lista_inicial']
+		clear()
 
-			''')
-			escolha_repositorios = str(input("\033[1;32mO que você deseja fazer? > \033[1;m"))
-			if escolha_repositorios == "1":
+		while opcao_escolhida == 1:
+			inquirer_lista_repositorio = [
+				inquirer.List(
+					"lista_repositorio",
+					message="\033[1;32mO que deseja fazer? \033[1;m",
+					choices=[
+						('Adicionar repositórios no infosectools.list', 1),
+						('Atualizar', 2),
+						('Remover lista de repositório infosectools.list', 3),
+						('Visualizar o conteúdo do arquivo infosectools.list', 4),
+						('Voltar', 5),
+
+					],
+				),
+			]
+			escolha_repositorios = inquirer.prompt(inquirer_lista_repositorio)['lista_repositorio']
+
+			if escolha_repositorios == 1:
 				chave_apt = system("apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6")
 				repositorio_adicionado = system("echo '# Repositórios Kali Linux\ndeb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware' >> /etc/apt/sources.list.d/infosectools.list")
-			elif escolha_repositorios == "2":
+				clear()
+			elif escolha_repositorios == 2:
 				atualizacao_de_sistema = system("apt-get update -m")
-			elif escolha_repositorios == "3":
+				clear()
+			elif escolha_repositorios == 3:
 				source_list = "/etc/apt/sources.list.d/infosectools.list"
 				if path.exists(source_list):
-				    remove(source_list)
-				    print("\033[1;31m\nRepositório infosectools.list removido!\n\033[1;m")
+					clear()
+					remove(source_list)
+					print("\033[1;31m\nRepositório infosectools.list removido!\n\033[1;m")
 				else:
-				    print("\033[1;31m\nRepositório infosectools.list já foi removido!\n\033[1;m")
-				    				
-			elif escolha_repositorios == "4":
-				arquivo = open('/etc/apt/sources.list.d/infosectools.list', 'r')
-				print(arquivo.read())
-			elif escolha_repositorios == "5":
+					clear()
+					print("\033[1;31m\nRepositório infosectools.list já foi removido!\n\033[1;m")
+			
+			elif escolha_repositorios == 4:
+				try:
+					clear()
+					arquivo = open('/etc/apt/sources.list.d/infosectools.list', 'r')
+					print(arquivo.read())
+				except FileNotFoundError as error:
+					print('\033[1;31m\nRepositório infosectools.list não existe!\n\033[1;m')
+			elif escolha_repositorios == 5:
+				clear()
 				break
 			else:
 				print("\033[1;31mDesculpe, esse foi um comando inválido!\033[1;m")
-		if opcao_escolhida == '2':
+		if opcao_escolhida == 2:
+			clear()
 			exibicao_de_categorias()
-		elif opcao_escolhida == '0':
-			exit(1)
-		elif opcao_escolhida == 'clear':
-			system('clear')
-		elif opcao_escolhida == 'exit':
-				exit(1)
+		elif opcao_escolhida == 0:
+			clear()
+			sys.exit()
