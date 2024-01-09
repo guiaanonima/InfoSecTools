@@ -1,18 +1,18 @@
 categorias = {
-	1: ['Coleta de Informações', ['amap', 'casefile', 'cdpsnarf', 'cookie-cadger', 'dmitry', 'dnmap', 'dnsenum', 'dnsmap', 'dnsrecon', 'dnstracer', 'dnswalk', 'dotdotpwn', 'enum4linux', 'hping3', 'maltego-teeth', 'masscan', 'nmap', 'recon-ng', 'smtp-user-enum', 'snmpcheck', 'sslsplit', 'sslstrip', 'sslyze', 'theharvester', 'urlcrazy','wireshark']],
-	2: ['Análise de Vulnerabilidade', ['nmap', 'bbqsql', 'bed', 'cisco-auditing-tool', 'cisco-global-exploiter', 'cisco-ocs', 'cisco-torch', 'copy-router-config', 'doona', 'dotdotpwn', 'greenbone-security-assistant', 'hexorbase', 'jsql', 'lynis', 'nmap', 'ohrwurm', 'openvas-administrator', 'openvas-cli', 'openvas-manager', 'openvas-scanner', 'oscanner', 'powerfuzzer', 'sfuzz', 'sidguesser', 'siparmyknife', 'sqlmap', 'sqlninja', 'sqlsus', 'thc-ipv6', 'tnscmd10g', 'unix-privesc-check', 'yersinia']],
-	3: ['Ataques Wireless', ['aircrack-ng', 'asleap', 'bluelog', 'blueranger', 'bluesnarfer', 'bully', 'cowpatty', 'crackle', 'eapmd5pass', 'fern-wifi-cracker', 'ghost-phisher', 'giskismet', 'gqrx', 'hostapd-wpe', 'kalibrate-rtl', 'killerbee', 'kismet', 'mdk3', 'mfcuk', 'mfoc', 'mfterm', 'multimon-ng', 'pixiewps', 'reaver', 'redfang', 'rtlsdr-scanner', 'spooftooph', 'wifi-honey', 'wifiphisher', 'wifitap', 'wifite']],
-	4: ['Aplicações Web', ['apache-users', 'arachni', 'bbqsql', 'blindelephant', 'burpsuite', 'cutycapt', 'davtest', 'deblaze', 'dirb', 'dirbuster', 'fimap', 'funkload', 'gobuster', 'grabber', 'jboss-autopwn', 'joomscan', 'jsql', 'maltego-teeth', 'padbuster', 'paros', 'parsero', 'plecost', 'powerfuzzer', 'proxystrike', 'recon-ng', 'skipfish', 'sqlmap', 'sqlninja', 'sqlsus', 'ua-tester', 'uniscan', 'vega', 'w3af', 'webscarab', 'websploit', 'wfuzz', 'wpscan', 'xsser', 'zaproxy']],
-	5: ['Sniffing e Spoofing', ['burpsuite', 'dnschef', 'fiked', 'hamster-sidejack', 'hexinject', 'iaxflood', 'inviteflood', 'ismtp', 'isr-evilgrade', 'mitmproxy', 'ohrwurm', 'protos-sip', 'rebind', 'responder', 'rtpbreak', 'rtpinsertsound', 'rtpmixsound', 'sctpscan', 'siparmyknife', 'sipp', 'sipvicious', 'sniffjoke', 'sslsplit', 'sslstrip', 'thc-ipv6', 'voiphopper', 'webscarab', 'wifi-honey', 'wireshark', 'xspy', 'yersinia', 'zaproxy']],
-	6: ['Manutenção de Acesso', ['cryptcat', 'cymothoa', 'dbd', 'dns2tcp', 'http-tunnel', 'httptunnel', 'intersect', 'nishang', 'polenum', 'powersploit', 'pwnat', 'ridenum', 'sbd', 'u3-pwn', 'webshells', 'weevely', 'winexe']],
-	7: ['Ferramentas de Relatório', ['casefile', 'cutycapt', 'dos2unix', 'dradis', 'keepnote', 'magictree', 'metagoofil', 'nipper-ng', 'pipal']],
-	8: ['Ferramentas de Exploração', ['armitage', 'backdoor-factory', 'beef-xss', 'cisco-auditing-tool', 'cisco-global-exploiter', 'cisco-ocs', 'cisco-torch', 'crackle', 'exploitdb', 'jboss-autopwn', 'linux-exploit-suggester', 'maltego-teeth', 'set', 'shellnoob', 'sqlmap', 'thc-ipv6', 'yersinia']],
-	9: ['Ferramentas Forenses', ['binwalk', 'bulk-extractor', 'chntpw', 'cuckoo', 'dc3dd', 'ddrescue', 'python-distorm3', 'dumpzilla', 'volatility', 'xplico', 'foremost', 'galleta', 'guymager', 'iphone-backup-analyzer', 'p0f', 'pdf-parser', 'pdfid', 'pdgmail', 'peepdf', 'extundelete']],
-	10: ['Teste de Estresse', ['dhcpig', 'funkload', 'iaxflood', 'inviteflood', 'ipv6-toolkit', 'mdk3', 'reaver', 'rtpflood', 'slowhttptest', 't50', 'termineter', 'thc-ipv6', 'thc-ssl-dos']],
-	11: ['Ataques de Senha', ['acccheck', 'burpsuite', 'cewl', 'chntpw', 'cisco-auditing-tool', 'cmospwd', 'creddump', 'crunch', 'findmyhash', 'gpp-decrypt', 'hash-identifier', 'hexorbase', 'hydra', 'john', 'johnny', 'keimpx', 'maltego-teeth', 'maskprocessor', 'multiforcer', 'ncrack', 'oclgausscrack', 'pack', 'patator', 'polenum', 'rainbowcrack', 'rcracki-mt', 'rsmangler', 'statsprocessor', 'thc-pptp-bruter', 'truecrack', 'webscarab', 'wordlists', 'zaproxy']],
-	12: ['Engenharia Reversa', ['apktool', 'dex2jar', 'python-distorm3', 'edb-debugger', 'jad', 'javasnoop', 'smali', 'valgrind', 'yara']],
-	13: ['Hacking de Hardware', ['android-sdk', 'apktool', 'arduino', 'dex2jar', 'sakis3g', 'smali']],
-	14: ['Extras', ['kali-linux', 'kali-linux-full', 'kali-linux-all', 'kali-linux-top10', 'kali-linux-forensic', 'kali-linux-gpu', 'kali-linux-pwtools', 'kali-linux-rfid', 'kali-linux-sdr', 'kali-linux-voip', 'kali-linux-web', 'kali-linux-wireless', 'squid3']]
+	1: ['Coleta de Informações', ['kali-tools-information-gathering']],
+	2: ['Análise de Vulnerabilidade', ['kali-tools-vulnerability']],
+	3: ['Ataques Wireless', ['kali-tools-wireless']],
+	4: ['Aplicações Web', ['kali-tools-web']],
+	5: ['Sniffing e Spoofing', ['kali-tools-sniffing-spoofing']],
+	6: ['Ferramentas de Relatório', ['kali-tools-reporting']],
+	7: ['Ferramentas de Exploração', ['kali-tools-exploitation']],
+	8: ['Ferramentas Forenses', ['kali-tools-forensics']],
+	9: ['Teste de Estresse', ['dhcpig', 'funkload', 'iaxflood', 'inviteflood', 'ipv6-toolkit', 'mdk3', 'reaver', 'rtpflood', 'slowhttptest', 't50', 'termineter', 'thc-ipv6', 'thc-ssl-dos']],
+	10: ['Ataques de Senha', ['kali-tools-passwords']],
+	11: ['Engenharia Reversa', ['kali-tools-reverse-engineering']],
+	12: ['Hacking de Hardware', ['kali-tools-hardware']],
+    13: ['Ferramentas de Pós Exploração', ['kali-tools-post-exploitation']],
+    14: ['Ferramentas de Bug Bounty', ['FFF','airixss','Freq','Goop','Hakrawler','Httprobe','Meg','Haklistgen','Haktldextract','Hakcheckurl','tojson','gowitness','rush','hakcheckurl','shuffledns','rescope','gron','html-tool','gf','qsreplace','Amass','ffuf','assetfinder','github-subdomains','cf-check','waybackurls','nuclei','anew','notify','mildew','dirdar','unfurl','shuffledns','httpx','github-endpoints','dnsx','subfinder','gauplus','subjs','Gxss','crobat','dalfox','puredns','cariddi','interactsh-client','kxss','GetJs','hakrevdns','dnsgen']]
 }
 
 categorias[15] = ['Todas as Ferramentas', [ferramenta for ferramentas in categorias.values() for ferramenta in ferramentas[1]]] # Adicição de todas as ferramentas para opção de instalação
