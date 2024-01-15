@@ -29,11 +29,8 @@ def exibicao_de_categorias():
 	if distro_info[0] in ['debian', 'ubuntu', 'kali']:
 		instalador = 'apt'
 		argumento_do_instalador = '-y'
-	elif distro_info[0] in 'arch':
-		instalador = 'pacman'
-		argumento_do_instalador = '-Syyu'
 	else:
-		print(f"Desculpe, este script suporta apenas Debian, Ubuntu e Arch Linux. Sua distribuição ({distro_info}) não é suportada.")
+		print(f"Desculpe, este script suporta apenas instaladores de Debian, Ubuntu e Kali. Sua distribuição ({distro_info}) não é suportada.")
 		exit(1)
 
 	while True:
