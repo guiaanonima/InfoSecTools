@@ -40,7 +40,7 @@ Essa ferramenta, escrita em Python, visa facilitar a instalação e configuraç�
 - Conexão estável com a internet.
 
 > [!IMPORTANT]\
-> Não possuímos compatibilidade com Windows, apenas com distribuições Linux. Nestas, utilizamos os gerenciadores de pacote `apt` e `pacman`, no momento. Caso a sua distribuição linux não possua nenhum desses gerenciadores de pacote, por favor, [solicite](https://github.com/guiaanonima/InfoSecTools/issues/new?template=feature.yaml) para que seja incluído na ferramenta. 
+> Não possuímos compatibilidade com Windows, apenas com distribuições Linux. Nestas, utilizamos apenas o gerenciador de pacote `apt`, no momento. Caso a sua distribuição linux não possua esse gerenciador, por favor, [solicite](https://github.com/guiaanonima/InfoSecTools/issues/new?template=feature.yaml) para que seja incluído na ferramenta. 
 
 ## Instalação
 1. Realiza o clone do repositório
