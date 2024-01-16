@@ -14,7 +14,7 @@ jobs:
         run: |
           find . -type f -name "*.py" | while read -r files; do 
               file_name=$(basename "$files" .py)
-              if ! [[ $file_name =~  ^[a-z]+(_[a-z0-9]+)*\.py$ ]]; then
+              if ! [[ $file_name =~  ^[a-z]+(_[a-z0-9]+)*$ ]]; then
                   echo "::error title=Contem arquivos fora do padrao snake_case::O Arquivo $file_name esta fora do padrao"
                   exit 1
               fi
