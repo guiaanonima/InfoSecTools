@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-from Instalacao import verificar_root
-from Menu import menu, banner
+from instalacao import verificar_root
+from menu import menu, banner
 
 # Menu
 while True:

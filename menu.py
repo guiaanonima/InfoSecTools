@@ -1,7 +1,7 @@
 import inquirer
 from os import system, remove, path
 from categorias import categorias
-from Instalacao import instalacao_de_pacotes
+from instalacao import instalacao_de_pacotes
 import distro
 
 def banner():
