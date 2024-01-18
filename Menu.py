@@ -137,4 +137,4 @@ def menu():
 			exibicao_de_categorias()
 		elif opcao_escolhida == 0:
 			clear()
-			sys.exit()
+			exit()
