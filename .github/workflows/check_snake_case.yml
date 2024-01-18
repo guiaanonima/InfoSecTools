@@ -1,0 +1,22 @@
+name: Verifica snake_case
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  trigger-remote-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Analisa os arquivos 
+        run: |
+          find . -type f -name "*.py" | while read -r files; do 
+              file_name=$(basename "$files" .py)
+              if ! [[ $file_name =~  ^[a-z]+(_[a-z0-9]+)*$ ]]; then
+                  echo "::error title=Contem arquivos fora do padrao snake_case::O Arquivo $files esta fora do padrao"
+                  exit 1
+              fi
+          done
+        shell: bash 
