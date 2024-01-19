@@ -1,0 +1,5 @@
+nome: 'Ferramentas de Exploração'
+versao: 1.0
+id: 7
+packages:
+    - kali-tools-post-exploitation

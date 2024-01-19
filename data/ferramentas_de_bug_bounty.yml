@@ -1,0 +1,53 @@
+nome: 'Ferramentas de Bug Bounty'
+versao: 1.0
+id: 14
+packages:
+    - FFF
+    - airixss
+    - Freq
+    - Goop
+    - Hakrawler
+    - Httprobe
+    - Meg
+    - Haklistgen
+    - Haktldextract
+    - Hakcheckurl
+    - tojson
+    - gowitness
+    - rush
+    - hakcheckurl
+    - shuffledns
+    - rescope
+    - gron 
+    - html-tool
+    - gf
+    - qsreplace
+    - Amass
+    - ffuf
+    - assetfinder
+    - github-subdomains
+    - cf-check
+    - waybackurls
+    - nuclei
+    - anew
+    - notify
+    - mildew
+    - dirdar
+    - unfurl
+    - shuffledns
+    - httpx
+    - github-endpoints
+    - dnsx
+    - subfinder
+    - gauplus
+    - subjs
+    - Gxss
+    - crobat
+    - dalfox
+    - puredns
+    - cariddi
+    - interactsh-client
+    - kxss
+    - GetJs
+    - hakrevdns
+    - dnsgen

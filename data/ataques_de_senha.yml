@@ -1,0 +1,5 @@
+nome: 'Ataques de Senha'
+versao: 1.0
+id: 10
+packages:
+    - kali-tools-passwords

@@ -1,8 +1,11 @@
 import inquirer
 from os import system, remove, path
-from categorias import categorias
 from instalacao import instalacao_de_pacotes
 import distro
+import yaml
+from yaml.loader import SafeLoader
+import glob
+import os
 
 def banner():
 	print('''
@@ -31,34 +34,22 @@ def exibicao_de_categorias():
 		argumento_do_instalador = '-y'
 	else:
 		print(f"Desculpe, este script suporta apenas instaladores de Debian, Ubuntu e Kali. Sua distribuição ({distro_info}) não é suportada.")
-		exit(1)
-
+		exit(1)	
+	
+	choices = obter_opcoes_menu()
+	categorias = criar_dicionario_categorias()
+ 
 	while True:
 		try:
-			teste = [
+			menu = [
 				inquirer.Checkbox(
 					'selecao_categorias',
 					message = 'Qual categoria deseja instalar? (Pressione <space> para selecionar, Enter para finalizar)',
-					choices = [
-						('Coleta de Informações', 1),
-						('Análise de Vulnerabilidade', 2),
-						('Ataques Wireless', 3),
-						('Aplicações Web', 4),
-						('Sniffing e Spoofing', 5),
-						('Relatório', 6),
-						('Exploração', 7),
-						('Forenses', 8),
-						('Teste de Estresse', 9),
-						('Ataques de Senha', 10),
-						('Engenharia Reversa', 11),
-						('Hacking de Hardware', 12),
-						('Pós Exploração', 13),
-						('Todas as Ferramentas', 15)
-					],
+					choices = choices,
 				),
 			]
 
-			respostas = inquirer.prompt(teste)['selecao_categorias']
+			respostas = inquirer.prompt(menu)['selecao_categorias']
 			for i in respostas:
 				instalacao_de_pacotes(i, categorias, instalador, argumento_do_instalador)
 
@@ -67,6 +58,39 @@ def exibicao_de_categorias():
 			exit(1)
 		except ValueError:
 			print("Escolha inválida. Tente novamente.")
+
+def obter_opcoes_menu() -> list:
+	yaml_files = []
+ 
+	path = os.getcwd()
+				
+	for file in glob.glob(path + '/data/' + "*.yml"):
+		yaml_files.append(file)
+ 
+	choices = []
+	for yaml_file in yaml_files:
+		with open(yaml_file) as f:
+			
+			data = yaml.load(f, Loader=SafeLoader)
+			
+			choices.append((data.get('nome'), data.get('id')))
+	choices.append(('Todas as Ferramentas', 15))
+	return choices
+
+def criar_dicionario_categorias() -> dict:
+	yaml_files = []
+ 
+	path = os.getcwd()
+				
+	for file in glob.glob(path + '/data/' + "*.yml"):
+		yaml_files.append(file)
+ 
+	categorias = {}
+	for yaml_file in yaml_files:
+		with open(yaml_file) as f:
+			data = yaml.load(f, Loader=SafeLoader)
+			categorias[data.get('id')] = [data.get('nome'), data.get('packages')]
+	return categorias
 
 def menu():
 	while True:

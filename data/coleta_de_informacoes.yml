@@ -1,0 +1,5 @@
+nome: 'Coleta de Informações'
+versao: 1.0
+id: 1
+packages:
+    - kali-tools-information-gathering

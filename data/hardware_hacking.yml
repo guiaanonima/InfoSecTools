@@ -1,0 +1,5 @@
+nome: 'Hacking de Hardware'
+versao: 1.0
+id: 12
+packages:
+    - kali-tools-hardware

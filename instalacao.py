@@ -1,8 +1,7 @@
 from os import system, geteuid
 from subprocess import run
-from categorias import categorias
 
-def instalar_categoria(numero_da_categoria, instalador, argumento_do_instalador):
+def instalar_categoria(numero_da_categoria, categorias, instalador, argumento_do_instalador):
 	categoria = categorias[numero_da_categoria][1]
 	print(f"Instalando ferramentas na categoria {categorias[numero_da_categoria][0]}:")
 	for ferramenta in categoria:
@@ -15,15 +14,16 @@ def instalacao_de_pacotes(escolha, categorias, instalador, argumento_do_instalad
 	try:
 		if escolha in categorias:
 			system('clear')
+			print(f"Instalando ferramentas na categoria {categorias[escolha][0]}:")
 			print('Atualizando lista de pacotes...')
 			system('apt update -y')
 			system('clear')
 			print('Instalando pacotes...')
-			instalar_categoria(int(escolha), instalador, argumento_do_instalador)
+			instalar_categoria(int(escolha), categorias, instalador, argumento_do_instalador)
 		else:
 			print("Escolha inválida. Tente novamente.")
-	except:
-		pass
+	except Exception as erro:
+		print(erro)
 
 def verificar_root():
 	if geteuid() != 0:

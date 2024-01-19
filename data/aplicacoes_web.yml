@@ -1,0 +1,5 @@
+nome: 'Aplicações Web'
+versao: 1.0
+id: 4
+packages:
+    - kali-tools-web

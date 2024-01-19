@@ -1,0 +1,5 @@
+nome: 'Ataques Wireless'
+versao: 1.0
+id: 3
+packages:
+    - kali-tools-wireless

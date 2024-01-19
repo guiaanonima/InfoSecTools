@@ -1,0 +1,5 @@
+nome: 'Ferramentas Forenses'
+versao: 1.0
+id: 8
+packages:
+    - kali-tools-forensics

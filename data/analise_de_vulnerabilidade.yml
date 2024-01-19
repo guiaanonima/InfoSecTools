@@ -1,0 +1,5 @@
+nome: 'Análise de Vulnerabilidade'
+versao: 1.0
+id: 2
+packages:
+    - kali-tools-vulnerability

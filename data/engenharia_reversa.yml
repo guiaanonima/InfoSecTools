@@ -1,0 +1,5 @@
+nome: 'Engenharia Reversa'
+versao: 1.0
+id: 11
+packages:
+    - kali-tools-reverse-engineering

@@ -1,0 +1,5 @@
+nome: 'Sniffing e Spoofing'
+versao: 1.0
+id: 5
+packages:
+    - kali-tools-sniffing-spoofing
