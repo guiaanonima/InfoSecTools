@@ -90,6 +90,10 @@ def criar_dicionario_categorias() -> dict:
 		with open(yaml_file) as f:
 			data = yaml.load(f, Loader=SafeLoader)
 			categorias[data.get('id')] = [data.get('nome'), data.get('packages')]
+   
+	# Adicionando a categoria 15 com todas as ferramentas
+	todas_as_ferramentas = [ferramenta for ferramentas in categorias.values() for ferramenta in ferramentas[1]]
+	categorias[15] = ['Todas as Ferramentas', todas_as_ferramentas]
 	return categorias
 
 def menu():
