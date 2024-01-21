@@ -86,6 +86,7 @@ def menu():
 		opcao_escolhida = inquirer.prompt(inquirer_lista_incial)['lista_inicial']
 		clear()
 
+		escolha_repositorios = 0
 		while opcao_escolhida == 1 and escolha_repositorios != 5:
 			banner()
 			inquirer_lista_repositorio = [
