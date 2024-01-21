@@ -40,7 +40,7 @@ Essa ferramenta, escrita em Python, visa facilitar a instalação e configuraç�
 - Conexão estável com a internet.
 
 > [!IMPORTANT]\
-> Não possuímos compatibilidade com Windows, apenas com distribuições Linux. Nestas, utilizamos apenas o gerenciador de pacote `apt`, no momento. Caso a sua distribuição linux não possua esse gerenciador, por favor, [solicite](https://github.com/guiaanonima/InfoSecTools/issues/new?template=feature.yaml) para que seja incluído na ferramenta. 
+> Não possuímos compatibilidade com Windows, apenas com distribuições Linux. Nestas, utilizamos apenas o gerenciador de pacote `apt`, no momento. Caso a sua distribuição linux não possua esse gerenciador, por favor, [solicite](https://github.com/guiaanonima/InfoSecTools/issues/new?template=feature.yaml) para ser incluído na ferramenta. 
 
 ## Instalação
 1. Realiza o clone do repositório
@@ -52,16 +52,16 @@ git clone https://github.com/guiaanonima/InfoSecTools.git
 cd ./InfoSecTools
 ```
 
-3. Intale as dependências para que possa executar o código Python:
+3. Instale as dependências para poder executar o código Python:
 ```shell
 pip install -r requirements.txt
 ```
 
 ## Execução do programa
-Para executar o script, execute o comando abaixo:
+Para executar o programa, execute o comando abaixo:
 ```shell
 sudo python3 main.py
 ```
 
 # Contribua!
-Contribuições são bem-vindas! Se você deseja adicionar uma ferramenta, corrigir um bug ou melhorar a documentação, sinta-se à vontade para abrir uma issue, e/ou fazer um pull request.
+Contribuições são bem-vindas! Se você deseja adicionar uma ferramenta, corrigir um bug ou melhorar a documentação, sinta-se à vontade para abrir uma issue e/ou fazer um pull request.
