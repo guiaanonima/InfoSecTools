@@ -27,5 +27,4 @@ def instalacao_de_pacotes(escolha, categorias, instalador, argumento_do_instalad
 
 def verificar_root():
 	if geteuid() != 0:
-		print("Este script requer privilégios de superusuário (root) para instalar ferramentas.")
-		exit(1)
+		raise Exception("Este script requer privilégios de superusuário (root) para instalar ferramentas.")
