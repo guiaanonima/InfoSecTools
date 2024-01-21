@@ -7,5 +7,5 @@ from menu import menu, banner
 while True:
 	verificar_root()
 	banner()
-	menu()
+	
 

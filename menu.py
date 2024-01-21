@@ -34,6 +34,7 @@ def exibicao_de_categorias():
 		exit(1)
 
 	while True:
+		banner()
 		try:
 			teste = [
 				inquirer.Checkbox(
@@ -71,7 +72,7 @@ def exibicao_de_categorias():
 
 def menu():
 	while True:
-
+		banner()
 		inquirer_lista_incial = [
 			inquirer.List(
 				"lista_inicial",
@@ -88,6 +89,7 @@ def menu():
 		clear()
 
 		while opcao_escolhida == 1:
+			banner()
 			inquirer_lista_repositorio = [
 				inquirer.List(
 					"lista_repositorio",
