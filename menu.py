@@ -48,7 +48,7 @@ def exibicao_de_categorias():
 						('Sniffing e Spoofing', 5),
 						('Relatório', 6),
 						('Exploração', 7),
-						('Forenses', 8),
+						('Forense', 8),
 						('Teste de Estresse', 9),
 						('Ataques de Senha', 10),
 						('Engenharia Reversa', 11),
