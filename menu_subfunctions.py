@@ -1,7 +1,5 @@
 from os import system, remove, path
-
-def clear():
-	system('clear')
+from utils import clear
 
 def add_repo_to_infosectools_list():
     system("apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6")
@@ -33,8 +31,10 @@ def get_infosectool_list():
 def return_menu():
     clear()
 
-dict_choices_infosectools_list = {1:add_repo_to_infosectools_list,
-			    2:update_repo_list,
-                3:remove_infosectool_list,
-				4:get_infosectool_list,
-                5: clear}
+dict_choices_infosectools_list = {
+    1: add_repo_to_infosectools_list,
+	2: update_repo_list,
+    3: remove_infosectool_list,
+	4: get_infosectool_list,
+    5: clear
+}

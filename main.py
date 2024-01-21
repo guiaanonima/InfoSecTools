@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 
-from instalacao import verificar_root
-from menu import menu, banner
+from utils import verificar_root
+from menu import menu
 
 if __name__ == "__main__":
     while True:
-	    verificar_root()
-	    menu()
-	
-
+        verificar_root()
+        menu()

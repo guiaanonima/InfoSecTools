@@ -1,9 +1,8 @@
 import inquirer
-from os import system, remove, path
 from categorias import categorias
 from instalacao import instalacao_de_pacotes
 from menu_subfunctions import *
-import distro
+from utils import check_distro
 
 def banner():
 	print('''
@@ -23,14 +22,8 @@ def banner():
 
 # configuração do gerenciador de pacotes referente a distribuição linux
 def exibicao_de_categorias():
-	distro_info = distro.name().lower().split()
-
-	if distro_info[0] in ['debian', 'ubuntu', 'kali']:
-		instalador = 'apt'
-		argumento_do_instalador = '-y'
-	else:
-		raise Exception(f"Desculpe, este script suporta apenas instaladores de Debian, Ubuntu e Kali. Sua distribuição ({distro_info}) não é suportada.")
-
+	
+	distro = check_distro()
 
 	while True:
 		banner()
@@ -61,7 +54,7 @@ def exibicao_de_categorias():
 
 			respostas = inquirer.prompt(options)['selecao_categorias']
 			for i in respostas:
-				instalacao_de_pacotes(i, categorias, instalador, argumento_do_instalador)
+				instalacao_de_pacotes(i, categorias, distro['instalador'], distro['argumento_do_instalador'])
 
 		except KeyboardInterrupt:
 			raise Exception("Interrupção via teclado (Ctrl + C)")

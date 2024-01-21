@@ -1,4 +1,4 @@
-from os import system, geteuid
+from os import system
 from subprocess import run
 from categorias import categorias
 
@@ -24,7 +24,3 @@ def instalacao_de_pacotes(escolha, categorias, instalador, argumento_do_instalad
 			print("Escolha inválida. Tente novamente.")
 	except:
 		pass
-
-def verificar_root():
-	if geteuid() != 0:
-		raise Exception("Este script requer privilégios de superusuário (root) para instalar ferramentas.")
