@@ -52,7 +52,8 @@ def exibicao_de_categorias():
 						('Ataques de Senha', 10),
 						('Engenharia Reversa', 11),
 						('Hacking de Hardware', 12),
-						('Pós Exploração', 13),
+						('Pós Explosração', 13),
+						('Pós Exploração', 14),
 						('Todas as Ferramentas', 15)
 					],
 				),
@@ -137,4 +138,4 @@ def menu():
 			exibicao_de_categorias()
 		elif opcao_escolhida == 0:
 			clear()
-			sys.exit()
+			exit()
