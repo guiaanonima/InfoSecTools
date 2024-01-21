@@ -12,7 +12,8 @@ categorias = {
 	11: ['Engenharia Reversa', ['kali-tools-reverse-engineering']],
 	12: ['Hacking de Hardware', ['kali-tools-hardware']],
     13: ['Ferramentas de Pós Exploração', ['kali-tools-post-exploitation']],
-    14: ['Ferramentas de Bug Bounty', ['FFF','airixss','Freq','Goop','Hakrawler','Httprobe','Meg','Haklistgen','Haktldextract','Hakcheckurl','tojson','gowitness','rush','hakcheckurl','shuffledns','rescope','gron','html-tool','gf','qsreplace','Amass','ffuf','assetfinder','github-subdomains','cf-check','waybackurls','nuclei','anew','notify','mildew','dirdar','unfurl','shuffledns','httpx','github-endpoints','dnsx','subfinder','gauplus','subjs','Gxss','crobat','dalfox','puredns','cariddi','interactsh-client','kxss','GetJs','hakrevdns','dnsgen']]
+    14: ['OSINT', ['photon','sn0int','metagoofil','sherlock','maltego','theharvester','spiderfoot','osrframework','recon-ng','exiflooter']]
+    # 14: ['Ferramentas de Bug Bounty', ['FFF','airixss','Freq','Goop','Hakrawler','Httprobe','Meg','Haklistgen','Haktldextract','Hakcheckurl','tojson','gowitness','rush','hakcheckurl','shuffledns','rescope','gron','html-tool','gf','qsreplace','Amass','ffuf','assetfinder','github-subdomains','cf-check','waybackurls','nuclei','anew','notify','mildew','dirdar','unfurl','shuffledns','httpx','github-endpoints','dnsx','subfinder','gauplus','subjs','Gxss','crobat','dalfox','puredns','cariddi','interactsh-client','kxss','GetJs','hakrevdns','dnsgen']]
 }
 
 categorias[15] = ['Todas as Ferramentas', [ferramenta for ferramentas in categorias.values() for ferramenta in ferramentas[1]]] # Adicição de todas as ferramentas para opção de instalação
