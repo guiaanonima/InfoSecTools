@@ -53,7 +53,7 @@ def exibicao_de_categorias():
 						('Engenharia Reversa', 11),
 						('Hacking de Hardware', 12),
 						('Pós Explosração', 13),
-						('Pós Exploração', 14),
+						('OSINT', 14),
 						('Todas as Ferramentas', 15)
 					],
 				),
