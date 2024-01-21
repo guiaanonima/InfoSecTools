@@ -30,8 +30,8 @@ def exibicao_de_categorias():
 		instalador = 'apt'
 		argumento_do_instalador = '-y'
 	else:
-		print(f"Desculpe, este script suporta apenas instaladores de Debian, Ubuntu e Kali. Sua distribuição ({distro_info}) não é suportada.")
-		exit(1)
+		raise Exception(f"Desculpe, este script suporta apenas instaladores de Debian, Ubuntu e Kali. Sua distribuição ({distro_info}) não é suportada.")
+
 
 	while True:
 		banner()
@@ -65,8 +65,7 @@ def exibicao_de_categorias():
 				instalacao_de_pacotes(i, categorias, instalador, argumento_do_instalador)
 
 		except KeyboardInterrupt:
-			print('')
-			exit(1)
+			raise Exception("Interrupção via teclado (Ctrl + C)")
 		except ValueError:
 			print("Escolha inválida. Tente novamente.")
 
