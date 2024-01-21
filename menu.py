@@ -36,7 +36,7 @@ def exibicao_de_categorias():
 	while True:
 		banner()
 		try:
-			teste = [
+			options = [
 				inquirer.Checkbox(
 					'selecao_categorias',
 					message = 'Qual categoria deseja instalar? (Pressione <space> para selecionar, Enter para finalizar)',
@@ -60,7 +60,7 @@ def exibicao_de_categorias():
 				),
 			]
 
-			respostas = inquirer.prompt(teste)['selecao_categorias']
+			respostas = inquirer.prompt(options)['selecao_categorias']
 			for i in respostas:
 				instalacao_de_pacotes(i, categorias, instalador, argumento_do_instalador)
 
