@@ -6,7 +6,7 @@ categorias = {
 	5: ['Sniffing e Spoofing', ['kali-tools-sniffing-spoofing']],
 	6: ['Ferramentas de Relatório', ['kali-tools-reporting']],
 	7: ['Ferramentas de Exploração', ['kali-tools-exploitation']],
-	8: ['Ferramentas Forenses', ['kali-tools-forensics']],
+	8: ['Ferramentas de Forense', ['kali-tools-forensics']],
 	9: ['Teste de Estresse', ['dhcpig', 'funkload', 'iaxflood', 'inviteflood', 'ipv6-toolkit', 'mdk3', 'reaver', 'rtpflood', 'slowhttptest', 't50', 'termineter', 'thc-ipv6', 'thc-ssl-dos']],
 	10: ['Ataques de Senha', ['kali-tools-passwords']],
 	11: ['Engenharia Reversa', ['kali-tools-reverse-engineering']],
