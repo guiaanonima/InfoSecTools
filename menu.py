@@ -54,7 +54,7 @@ def exibicao_de_categorias():
 						('Hacking de Hardware', 12),
 						('Pós Exploração', 13),
 						('OSINT', 14),
-						('Todas as Ferramentas', 15)
+						('Todas as Ferramentas', 16)
 					],
 				),
 			]
