@@ -21,13 +21,18 @@ def remove_infosectool_list():
         print("\033[1;31m\nRepositório infosectools.list já foi removido!\n\033[1;m")
 
 def get_infosectool_list():
-    try:
-        clear()
-        with open('/etc/apt/sources.list.d/infosectools.list', mode='r', encoding='utf-8') as file:
-            print(file.read())
-    except FileNotFoundError as error:
+    clear()
+    if not path.exists('/etc/apt/sources.list.d/infosectools.list'):
         print('\033[1;31m\nRepositório infosectools.list não existe!\n\033[1;m')
+        return None
 
+    editor_list = ['editor','nano','vi','vim','nvim','emacs']
+    for editor in editor_list:
+        if system(f'{editor} /etc/apt/sources.list.d/infosectools.list 2> /dev/null') == 0:
+            return None
+            
+    print(f"Nenhum dos seguintes editores foi encontrado: ({' '.join(editor_list)})")
+    
 def return_menu():
     clear()
 
