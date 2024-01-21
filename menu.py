@@ -33,6 +33,7 @@ def exibicao_de_categorias():
 					'selecao_categorias',
 					message = 'Qual categoria deseja instalar? (Pressione <space> para selecionar, Enter para finalizar)',
 					choices = [
+						('Voltar'),
 						('Coleta de Informações', 1),
 						('Análise de Vulnerabilidade', 2),
 						('Ataques Wireless', 3),
@@ -53,8 +54,15 @@ def exibicao_de_categorias():
 			]
 
 			respostas = inquirer.prompt(options)['selecao_categorias']
-			for i in respostas:
-				instalacao_de_pacotes(i, categorias, distro['instalador'], distro['argumento_do_instalador'])
+			if ("Voltar" in respostas and len(respostas) > 1 or respostas == []):
+				clear()
+				print("Para voltar ao menu anterior selecione somente a opçao 'voltar'")
+			elif ("Voltar" in respostas):
+				clear()
+				return None 
+			else:
+				for i in respostas:
+					instalacao_de_pacotes(i, categorias, distro['instalador'], distro['argumento_do_instalador'])
 
 		except KeyboardInterrupt:
 			raise Exception("Interrupção via teclado (Ctrl + C)")
