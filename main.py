@@ -3,9 +3,9 @@
 from instalacao import verificar_root
 from menu import menu, banner
 
-# Menu
-while True:
-	verificar_root()
-	menu()
+if __name__ == "__main__":
+    while True:
+	    verificar_root()
+	    menu()
 	
 
