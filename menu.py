@@ -53,7 +53,8 @@ def exibicao_de_categorias():
 						('Engenharia Reversa', 11),
 						('Hacking de Hardware', 12),
 						('Pós Exploração', 13),
-						('Todas as Ferramentas', 15)
+						('OSINT', 14),
+						('Todas as Ferramentas', 16)
 					],
 				),
 			]
@@ -137,4 +138,4 @@ def menu():
 			exibicao_de_categorias()
 		elif opcao_escolhida == 0:
 			clear()
-			sys.exit()
+			exit()
