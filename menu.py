@@ -2,6 +2,7 @@ import inquirer
 from os import system, remove, path
 from categorias import categorias
 from instalacao import instalacao_de_pacotes
+from menu_subfunctions import *
 import distro
 
 def banner():
@@ -19,8 +20,6 @@ def banner():
 	   ''')
 
 
-def clear():
-	system('clear')
 
 # configuração do gerenciador de pacotes referente a distribuição linux
 def exibicao_de_categorias():
@@ -87,7 +86,8 @@ def menu():
 		opcao_escolhida = inquirer.prompt(inquirer_lista_incial)['lista_inicial']
 		clear()
 
-		while opcao_escolhida == 1:
+		escolha_repositorios = 0
+		while opcao_escolhida == 1 and escolha_repositorios != 5:
 			banner()
 			inquirer_lista_repositorio = [
 				inquirer.List(
@@ -105,35 +105,11 @@ def menu():
 			]
 			escolha_repositorios = inquirer.prompt(inquirer_lista_repositorio)['lista_repositorio']
 
-			if escolha_repositorios == 1:
-				chave_apt = system("apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ED444FF07D8D0BF6")
-				repositorio_adicionado = system("echo '# Repositórios Kali Linux\ndeb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware' >> /etc/apt/sources.list.d/infosectools.list")
-				clear()
-			elif escolha_repositorios == 2:
-				atualizacao_de_sistema = system("apt-get update -m")
-				clear()
-			elif escolha_repositorios == 3:
-				source_list = "/etc/apt/sources.list.d/infosectools.list"
-				if path.exists(source_list):
-					clear()
-					remove(source_list)
-					print("\033[1;31m\nRepositório infosectools.list removido!\n\033[1;m")
-				else:
-					clear()
-					print("\033[1;31m\nRepositório infosectools.list já foi removido!\n\033[1;m")
-			
-			elif escolha_repositorios == 4:
-				try:
-					clear()
-					arquivo = open('/etc/apt/sources.list.d/infosectools.list', 'r')
-					print(arquivo.read())
-				except FileNotFoundError as error:
-					print('\033[1;31m\nRepositório infosectools.list não existe!\n\033[1;m')
-			elif escolha_repositorios == 5:
-				clear()
-				break
+			if escolha_repositorios in dict_choices_infosectools_list:
+				dict_choices_infosectools_list[escolha_repositorios]()
 			else:
 				print("\033[1;31mDesculpe, esse foi um comando inválido!\033[1;m")
+
 		if opcao_escolhida == 2:
 			clear()
 			exibicao_de_categorias()
