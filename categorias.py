@@ -12,7 +12,7 @@ categorias = {
 	11: ['Engenharia Reversa', ['kali-tools-reverse-engineering', 'smali', 'valgrind', 'yara']],
 	12: ['Hacking de Hardware', ['kali-tools-hardware', 'android-sdk', 'apktool', 'dex2jar', 'sakis3g', 'smali']],
     13: ['Ferramentas de Pós Exploração', ['kali-tools-post-exploitation']],
-    14: ['OSINT', ['photon','sn0int','metagoofil','sherlock','maltego','theharvester','spiderfoot','osrframework','recon-ng','exiflooter']],
+    14: ['OSINT', ['photon','sn0int','metagoofil','sherlock','maltego','theharvester','spiderfoot','osrframework','recon-ng','exiflooter', 'sherlock']],
     15: ['Ferramentas de Bug Bounty', ['FFF','airixss','Freq','Goop','Hakrawler','Httprobe','Meg','Haklistgen','Haktldextract','Hakcheckurl','tojson','gowitness','rush','hakcheckurl','shuffledns','rescope','gron','html-tool','gf','qsreplace','Amass','ffuf','assetfinder','github-subdomains','cf-check','waybackurls','nuclei','anew','notify','mildew','dirdar','unfurl','shuffledns','httpx','github-endpoints','dnsx','subfinder','gauplus','subjs','Gxss','crobat','dalfox','puredns','cariddi','interactsh-client','kxss','GetJs','hakrevdns','dnsgen']]
 }
 
