@@ -44,10 +44,10 @@ Essa ferramenta, escrita em Python, visa facilitar a instalação e configuraç�
 
 Distribuição | Testada |
 -- |-- |
-Ubuntu 22.04 LTS | ✅
-Debian 12.04 | ✅
-Kali (2023.4) | ✅
-Arch (2024.1.1) | ✅
+Ubuntu 22.04 LTS | ✓
+Debian 12.04 | ✓
+Kali (2023.4) | ✓
+Arch | ✗
 
 ## Instalação
 1. Realiza o clone do repositório
