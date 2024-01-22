@@ -44,12 +44,17 @@ Essa ferramenta, escrita em Python, visa facilitar a instalação e configuraç�
 
 ## Instalação
 
+1. Realize o login como usuário root
+```shell
+su
+```
 
-1. Realiza o clone do repositório
+2. Realiza o clone do repositório
 ```shell
 git clone https://github.com/guiaanonima/InfoSecTools.git
 ```
-2. Entre no diretório do repositório:
+
+3. Entre no diretório do repositório:
 ```shell
 cd ./InfoSecTools
 ```
