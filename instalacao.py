@@ -7,7 +7,7 @@ def instalar_categoria(numero_da_categoria, instalador, argumento_do_instalador)
 	print(f"Instalando ferramentas na categoria {categorias[numero_da_categoria][0]}:")
 	for ferramenta in categoria:
 		try:
-			run([instalador, 'install', ferramenta, argumento_do_instalador])
+			run([instalador, 'install', ferramenta, argumento_do_instalador, '-o', 'APT::Keep-Downloaded-Packages="false"'])
 		except Exception as erro:
 			print(f'Error: {erro}')
 
