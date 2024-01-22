@@ -55,8 +55,7 @@ git clone https://github.com/guiaanonima/InfoSecTools.git
 ```shell
 cd ./InfoSecTools
 ```
-
-3. Instale as dependências para poder executar o código Python:
+4. Instale as dependências para poder executar o código Python:
 ```shell
 pip install -r requirements.txt
 ```
