@@ -43,11 +43,13 @@ Essa ferramenta, escrita em Python, visa facilitar a instalação e configuraç�
 > Não possuímos compatibilidade com Windows, apenas com distribuições Linux. Nestas, utilizamos apenas o gerenciador de pacote `apt`, no momento. Caso a sua distribuição linux não possua esse gerenciador, por favor, [solicite](https://github.com/guiaanonima/InfoSecTools/issues/new?template=feature.yaml) para ser incluído na ferramenta. 
 
 ## Instalação
+
 1. Realize o login como usuário root
 ```shell
 su
 ```
 2. Realiza o clone do repositório
+
 ```shell
 git clone https://github.com/guiaanonima/InfoSecTools.git
 ```
@@ -55,7 +57,11 @@ git clone https://github.com/guiaanonima/InfoSecTools.git
 ```shell
 cd ./InfoSecTools
 ```
+
+> [!TIP]
+> Sugestão: Recomendamos realizar a instalação das dependências em um ambiente isolado, como, por exemplo, utilizando o [virtualenv](https://virtualenv.pypa.io/en/latest/) ou [conda](https://docs.conda.io/en/latest/)!
 4. Instale as dependências para poder executar o código Python:
+
 ```shell
 pip install -r requirements.txt
 ```
