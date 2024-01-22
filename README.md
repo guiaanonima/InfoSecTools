@@ -43,11 +43,15 @@ Essa ferramenta, escrita em Python, visa facilitar a instalação e configuraç�
 > Não possuímos compatibilidade com Windows, apenas com distribuições Linux. Nestas, utilizamos apenas o gerenciador de pacote `apt`, no momento. Caso a sua distribuição linux não possua esse gerenciador, por favor, [solicite](https://github.com/guiaanonima/InfoSecTools/issues/new?template=feature.yaml) para ser incluído na ferramenta. 
 
 ## Instalação
-1. Realiza o clone do repositório
+1. Realize o login como usuário root
+```shell
+su
+```
+2. Realiza o clone do repositório
 ```shell
 git clone https://github.com/guiaanonima/InfoSecTools.git
 ```
-2. Entre no diretório do repositório:
+3. Entre no diretório do repositório:
 ```shell
 cd ./InfoSecTools
 ```
