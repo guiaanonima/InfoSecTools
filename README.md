@@ -44,19 +44,24 @@ Essa ferramenta, escrita em Python, visa facilitar a instalação e configuraç�
 
 ## Instalação
 
+1. Realize o login como usuário root
+```shell
+su
+```
+2. Realiza o clone do repositório
 
-1. Realiza o clone do repositório
 ```shell
 git clone https://github.com/guiaanonima/InfoSecTools.git
 ```
-2. Entre no diretório do repositório:
+3. Entre no diretório do repositório:
 ```shell
 cd ./InfoSecTools
 ```
 
 > [!TIP]
 > Sugestão: Recomendamos realizar a instalação das dependências em um ambiente isolado, como, por exemplo, utilizando o [virtualenv](https://virtualenv.pypa.io/en/latest/) ou [conda](https://docs.conda.io/en/latest/)!
-3. Instale as dependências para poder executar o código Python:
+4. Instale as dependências para poder executar o código Python:
+
 ```shell
 pip install -r requirements.txt
 ```
