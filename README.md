@@ -40,7 +40,8 @@ Essa ferramenta, escrita em Python, visa facilitar a instalação e configuraç�
 - Conexão estável com a internet.
 
 > [!IMPORTANT]\
-> Não possuímos compatibilidade com Windows, apenas com distribuições Linux. Nestas, utilizamos apenas o gerenciador de pacote `apt`, no momento. Caso a sua distribuição linux não possua esse gerenciador, por favor, [solicite](https://github.com/guiaanonima/InfoSecTools/issues/new?template=feature.yaml) para ser incluído na ferramenta.
+> Não possuímos compatibilidade com Windows, apenas com distribuições Linux. Nestas, utilizamos apenas o gerenciador de pacote `apt`, no momento. Caso a sua distribuição linux não possua esse gerenciador, por favor, [solicite](https://github.com/guiaanonima/InfoSecTools/issues/new?template=feature.yaml) para ser incluído na ferramenta.\
+> É recomendado o uso desta ferramenta em uma VM (Virtual Machine), devido a instalação de diversas dependências.
 
 Distribuição | Testada |
 -- |-- |
@@ -50,16 +51,25 @@ Kali (2023.4) | ✓
 Arch | ✗
 
 ## Instalação
-1. Realiza o clone do repositório
+
+1. Realize o login como usuário root
+```shell
+su
+```
+2. Realiza o clone do repositório
+
 ```shell
 git clone https://github.com/guiaanonima/InfoSecTools.git
 ```
-2. Entre no diretório do repositório:
+3. Entre no diretório do repositório:
 ```shell
 cd ./InfoSecTools
 ```
 
-3. Instale as dependências para poder executar o código Python:
+> [!TIP]
+> Sugestão: Recomendamos realizar a instalação das dependências em um ambiente isolado, como, por exemplo, utilizando o [virtualenv](https://virtualenv.pypa.io/en/latest/) ou [conda](https://docs.conda.io/en/latest/)!
+4. Instale as dependências para poder executar o código Python:
+
 ```shell
 pip install -r requirements.txt
 ```
