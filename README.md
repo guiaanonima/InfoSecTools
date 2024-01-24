@@ -65,7 +65,7 @@ pip install -r requirements.txt
 ## Execução do programa
 Para executar o programa, execute o comando abaixo:
 ```shell
-sudo python3 main.py
+python3 main.py
 ```
 
 ![](/assets/gif/execucao.gif)
