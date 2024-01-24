@@ -60,7 +60,7 @@ cd ./InfoSecTools
 pip install -r requirements.txt
 ```
 
-![](/InfoSecTools/assets/gif/instalacao.gif)
+![](/assets/gif/instalacao.gif)
 
 ## Execução do programa
 Para executar o programa, execute o comando abaixo:
@@ -68,7 +68,7 @@ Para executar o programa, execute o comando abaixo:
 sudo python3 main.py
 ```
 
-![](/InfoSecTools/assets/gif/execucao.gif)
+![](/assets/gif/execucao.gif)
 
 # Contribua!
 Contribuições são bem-vindas! Se você deseja adicionar uma ferramenta, corrigir um bug ou melhorar a documentação, sinta-se à vontade para abrir uma issue e/ou fazer um pull request.
