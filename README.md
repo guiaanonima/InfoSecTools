@@ -74,11 +74,15 @@ cd ./InfoSecTools
 pip install -r requirements.txt
 ```
 
+![](/assets/gif/instalacao.gif)
+
 ## Execução do programa
 Para executar o programa, execute o comando abaixo:
 ```shell
-sudo python3 main.py
+python3 main.py
 ```
+
+![](/assets/gif/execucao.gif)
 
 # Contribua!
 Contribuições são bem-vindas! Se você deseja adicionar uma ferramenta, corrigir um bug ou melhorar a documentação, sinta-se à vontade para abrir uma issue e/ou fazer um pull request.
