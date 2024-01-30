@@ -13,6 +13,10 @@ def instalar_categoria(numero_da_categoria, instalador, argumento_do_instalador)
 
 def instalacao_de_pacotes(escolha, categorias, instalador, argumento_do_instalador):
 	try:
+
+		with open('/etc/apt/sources.list.d/infosectools.list', 'r') as arquivo:
+			arquivo.close()
+
 		if escolha in categorias:
 			system('clear')
 			print('Atualizando lista de pacotes...')
@@ -22,5 +26,9 @@ def instalacao_de_pacotes(escolha, categorias, instalador, argumento_do_instalad
 			instalar_categoria(int(escolha), instalador, argumento_do_instalador)
 		else:
 			print("Escolha inválida. Tente novamente.")
-	except:
-		pass
+
+	except FileNotFoundError:
+	
+		system('clear')
+		print('''> Arquivo infosectools.list não foi adicionado para instalação das ferramentas.
+> Para adicioná-lo siga as opções: Voltar > Adicionar repositórios Kali e Atualizar > Adicionar repositórios no infosectools.list''')
