@@ -6,14 +6,24 @@ def add_repo_to_infosectools_list():
 
     file_path = "/etc/apt/sources.list.d/infosectools.list"
     repository = "deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware"
-
-    with open(file_path, "r") as file:
-        lines = file.readlines()
     
-    if repository not in lines:
-        with open(file_path, "w") as file:
-            file.write(repository)
-    clear()
+    try:
+        
+        if path.exists(file_path) == False:
+            with open(file_path,'w') as arquivo:
+                arquivo.write(repository)
+        
+        else:
+            with open(file_path, "r") as arquivo:
+                linhas = arquivo.readlines()
+            
+            if repository not in linhas:
+                with open(file_path, "w") as arquivo:
+                    arquivo.write(repository)
+        clear()
+
+    except Exception as erro:
+        print(f'O seguinte erro foi gerado: {erro}')
 
 def update_repo_list():
     system("apt-get update -m")
