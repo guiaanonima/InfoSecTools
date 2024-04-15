@@ -1,7 +1,10 @@
 <p class="header" align="center">
- <img width="100px" src="https://media.discordapp.net/attachments/1027622332740673536/1166777328051949679/image.png?ex=654bb910&is=65394410&hm=c3ce80592d557b3ce1ea9c281891f4915dcb80ab950ad937ff5a03ecbb38c6f1&=&width=732&height=902" align="center" alt="GitHub Readme Stats" />
- <h2 align="center">InfoSecTools</h2>
- <p align="center">Realize a instalação de suas ferramentas de segurança da informação de forma automatizada!</p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/logo-white.png">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/logo-dark.png">
+    <img align="center" width="350px" src="./assets/logo-dark.png" alt="Shows a profile image about the owner of this github profile.">
+  </picture>
+  <p align="center">Realize a instalação de suas ferramentas de segurança da informação de forma automatizada!</p>
 </p>
 <p align="center">
   <a href="https://github.com/guiaanonima/InfoSecTools/graphs/contributors">
