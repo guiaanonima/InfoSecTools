@@ -1,7 +1,10 @@
 <p class="header" align="center">
- <img width="350px" src="./assets/logo.png" align="center" alt="InfoSecTools" />
- <h2 align="center">InfoSecTools</h2>
- <p align="center">Realize a instalação de suas ferramentas de segurança da informação de forma automatizada!</p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/logo-white.png">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/logo-dark.png">
+    <img align="center" width="350px" src="./assets/logo-dark.png" alt="Shows a profile image about the owner of this github profile.">
+  </picture>
+  <p align="center">Realize a instalação de suas ferramentas de segurança da informação de forma automatizada!</p>
 </p>
 <p align="center">
   <a href="https://github.com/guiaanonima/InfoSecTools/graphs/contributors">
